@@ -4,10 +4,13 @@ using namespace std;
 char b[3][3] = { {'1','2','3'}, {'4','5','6'}, {'7','8','9'} };
 char t = 'X';
 
-void show() {
+void show()
+{
     cout << "\n";
-    for(int i=0;i<3;i++) {
-        for(int j=0;j<3;j++) {
+    for(int i=0;i<3;i++) 
+    {
+        for(int j=0;j<3;j++)
+        {
             cout << b[i][j];
             if(j<2) cout << " | ";
         }
@@ -17,8 +20,10 @@ void show() {
     cout << "\n";
 }
 
-bool win() {
-    for(int i=0;i<3;i++) {
+bool win() 
+{
+    for(int i=0;i<3;i++) 
+    {
         if(b[i][0]==t && b[i][1]==t && b[i][2]==t) return true;
         if(b[0][i]==t && b[1][i]==t && b[2][i]==t) return true;
     }
@@ -27,14 +32,16 @@ bool win() {
     return false;
 }
 
-bool draw() {
+bool draw() 
+{
     for(int i=0;i<3;i++)
         for(int j=0;j<3;j++)
             if(b[i][j]!='X' && b[i][j]!='O') return false;
     return true;
 }
 
-int main() {
+int main() 
+{
     char again;
     do {
         char n='1';
@@ -77,3 +84,4 @@ int main() {
     cout<<"Game over!\n";
     return 0;
 }
+
